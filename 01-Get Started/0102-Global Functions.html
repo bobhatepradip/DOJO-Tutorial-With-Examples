@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial: Getting Started</title>
+</head>
+<body>
+    <h1 id="greeting">Global functions</h1>
+    <h3 id="H3">require and define:</h3>
+    <h5>For getting started, it is sufficient to understand that (1) require enables you to load modules and use them, while (2) define allows you to define your own modules.</h5>
+    <!-- load Dojo -->
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"
+        data-dojo-config="async: true"></script>
+
+    <script>
+        require(
+                //Load Moduels
+                [
+                'dojo/dom',
+                'dojo/dom-construct'
+                ],
+                // Call back function
+                function (dom, domConstruct) {
+                var greetingNode = dom.byId('greeting');
+                domConstruct.place('<em> Dojo!</em>', greetingNode);
+                }
+            );
+    </script>
+</body>
+</html>
